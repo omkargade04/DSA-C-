@@ -1,5 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
 
 // void sortzeroandone(vector<int> &v){
 
@@ -9,7 +7,7 @@ using namespace std;
 // 	{
 // 		zeros_count++;
 // 	}
-		
+
 // 	}
 
 // 	for (int i = 0; i < v.size(); ++i)
@@ -20,7 +18,7 @@ using namespace std;
 // 			}
 // 			else{
 // 				v[i] = 1;
-// 			}	
+// 			}
 // 		}
 // }
 
@@ -70,33 +68,32 @@ using namespace std;
 // 	 }
 // 	 cout<<endl;
 
+// void sortEvenandOdd(vector<int> &v){
+//  int even_count = 0;
+//  for (int i = 0; i < v.size(); ++i)
+//  {
+//  	if (v[i]%2==0)
+//  	{
+//  		even_count++;
+//  	}
+//  }
 
-//void sortEvenandOdd(vector<int> &v){
-	// int even_count = 0;
-	// for (int i = 0; i < v.size(); ++i)
-	// {
-	// 	if (v[i]%2==0)
-	// 	{
-	// 		even_count++;
-	// 	}
-	// }
-
-	// for (int i = 0; i < v.size(); ++i)
-	// {
-	// 	if(v[i]%2==0){
-	// 		cout<<v[i]<<" ";
-	// 	}
-	// }
-	// for (int i = 0; i < v.size(); ++i)
-	// {
-	// 	if(v[i]%2!=0){
-	// 		cout<<v[i]<<" ";
-	// 	}
-	// }
-	// cout<<endl;
-//TWO POINTERS*****
-// 	int left_ptr = 0;
-// 	int right_ptr = v.size()-1;
+// for (int i = 0; i < v.size(); ++i)
+// {
+// 	if(v[i]%2==0){
+// 		cout<<v[i]<<" ";
+// 	}
+// }
+// for (int i = 0; i < v.size(); ++i)
+// {
+// 	if(v[i]%2!=0){
+// 		cout<<v[i]<<" ";
+// 	}
+// }
+// cout<<endl;
+// TWO POINTERS*****
+//  	int left_ptr = 0;
+//  	int right_ptr = v.size()-1;
 
 // 	while(left_ptr < right_ptr)
 // 	{
@@ -114,7 +111,7 @@ using namespace std;
 // 		}
 // 	}
 // 	return;
-// } 
+// }
 
 // int main(){
 
@@ -131,26 +128,26 @@ using namespace std;
 // 	}
 // 	cout<<endl;
 
-	// for (int i = 0; i < n; ++i)
-	// {
-	// 	if(v[i]%2==0){
-	// 		cout<<v[i]<<" ";
-	// 	}
-	// }
+// for (int i = 0; i < n; ++i)
+// {
+// 	if(v[i]%2==0){
+// 		cout<<v[i]<<" ";
+// 	}
+// }
 
-	// for (int i = 0; i < n; ++i)
-	// {
-	// 	if(v[i]%2!=0){
-	// 		cout<<v[i]<<" ";
-	// 	}
-	// }
-	// cout<<"Sorted Array is ";
-	// sortEvenandOdd(v);
-	// for (int i = 0; i < v.size(); ++i)
-	// {
-	// 	cout<<v[i]<<" ";
-	// }
-	// cout<<endl;
+// for (int i = 0; i < n; ++i)
+// {
+// 	if(v[i]%2!=0){
+// 		cout<<v[i]<<" ";
+// 	}
+// }
+// cout<<"Sorted Array is ";
+// sortEvenandOdd(v);
+// for (int i = 0; i < v.size(); ++i)
+// {
+// 	cout<<v[i]<<" ";
+// }
+// cout<<endl;
 //----------------------------------------------------------------------------
 // 	void sortSquareofArray(vector<int> &v){
 
@@ -166,7 +163,7 @@ using namespace std;
 // 					ans.push_back(v[left_ptr]*v[left_ptr]);
 // 					left_ptr++;
 // 				}
-				
+
 // 				if(abs(v[left_ptr]) < abs(v[right_ptr])){
 
 // 					ans.push_back(v[right_ptr]*v[right_ptr]);
@@ -209,41 +206,50 @@ using namespace std;
 /*
 **************************PROBLEMS ON ARRAY 3*******************************
 *
- * *
-    * * * ********************************************************************
-*/	void SumBetweenIndex(vector<int> &v,int a,int b){
+* *
+* * * ********************************************************************
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void SumBetweenIndex(vector<int> &v, int a, int b)
+{
+
 	int left_ptr = a;
 	int right_ptr = b;
 
-	while(left_ptr < right_ptr){
+	while (left_ptr < right_ptr)
+	{
 		int sum = 0;
-		for(int i = a ; i <= b ; i++ ){
+		for (int i = a; i <= b; i++)
+		{
 			sum += v[i];
 		}
-		cout<<sum<<endl;
+		cout << sum << endl;
 	}
 	return;
 }
-	int main(){
-		std::vector<int> v;
-		int n;cin>>n;
-		for (int i = 0; i < n; ++i)
-		{
-			int ele;
-			cin>>ele;
-			v.push_back(ele);
-			cout<<v[i]<<" ";
-		}
-		cout<<endl;
+int main()
+{
+	std::vector<int> v;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; ++i)
+	{
+		int ele;
+		cin >> ele;
+		v.push_back(ele);
+		cout << v[i] << " ";
+	}
+	cout << endl;
 
-		int L;
-		int R;
-		cin>>L;
-		cin>>R;
+	int L;
+	int R;
+	cin >> L;
+	cin >> R;
 
-		SumBetweenIndex(v,L,R);
-		
-		cout<<endl;
+	SumBetweenIndex(v, L, R);
 
-
+	cout << endl;
 }
