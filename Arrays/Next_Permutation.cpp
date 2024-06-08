@@ -9,6 +9,7 @@ void nextPermutation(vector<int> &nums)
     //    and observe where the integer is less than the current integer
 
     int ind = -1;
+    int dummy = 0;
 
     for (int i = n - 2; i >= 0; i--)
     {
