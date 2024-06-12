@@ -40,8 +40,8 @@ int main()
     int m;
     cin >> m;
 
-    vector<int> v1;
-    vector<int> v2;
+    vector<int> v1(n);
+    vector<int> v2(m);
 
     for (int i = 0; i < n; i++)
     {
